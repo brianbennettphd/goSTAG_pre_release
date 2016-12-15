@@ -6,7 +6,7 @@
 An example set of gene lists.
 }
 \usage{data(goSTAG_example_gene_lists)}
-\format{
+\value{
 A list of vectors. Each element of the list corresponds to a gene list, and each vector contains the genes in the gene list.
 }
 \references{

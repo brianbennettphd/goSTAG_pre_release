@@ -8,9 +8,9 @@ Annotates each cluster of GO terms with the term containing the most paths to th
 annotateClusters(clusters)
 }
 \arguments{
-  \item{clusters}{
-  A list of vectors. Each element of the list corresponds to a cluster, and each vector contains the GO terms in the cluster.
-  }
+    \item{clusters}{
+    A list of vectors. Each element of the list corresponds to a cluster, and each vector contains the GO terms in the cluster.
+    }
 }
 \details{
 All of the GO terms within all of the clusters must belong to the same GO domain (either BP, CC, or MF).

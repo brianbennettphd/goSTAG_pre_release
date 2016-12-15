@@ -1,14 +1,14 @@
 ---
 title: "The goSTAG User's Guide"
 author: "Brian D. Bennett and Pierre R. Bushel"
-date: "`r format( Sys.Date(), '%B %d, %Y' )`"
+date: "December 15, 2016"
 output: 
-  BiocStyle::html_document2:
-    toc_float: true
+    BiocStyle::html_document2:
+        toc_float: true
 vignette: >
-  %\VignetteIndexEntry{The goSTAG User's Guide}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+    %\VignetteIndexEntry{The goSTAG User's Guide}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
 ---
 
 # Introduction

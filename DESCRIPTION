@@ -1,15 +1,15 @@
 Package: goSTAG
 Type: Package
 Title: goSTAG
-Version: 0.99.0
-Date: 2016-12-06
+Version: 0.99.1
+Date: 2016-12-15
 Author: Brian D. Bennett and Pierre R. Bushel
 Maintainer: Brian D. Bennett <brian.bennett@nih.gov> and Pierre R. Bushel <bushel@niehs.nih.gov>
 Description: A tool to use GO Subtrees to Tag and Annotate Genes within a set.
 License: GPL-3
-Depends: R (>= 3.3.0)
+Depends: R (>= 3.4)
 Imports: AnnotationDbi, biomaRt, GO.db, graphics, stats, utils
-Suggests: BiocStyle, knitr, rmarkdown
+Suggests: BiocStyle, knitr, rmarkdown, testthat
 VignetteBuilder: knitr
 LazyData: true
 biocViews: GeneExpression, DifferentialExpression, GeneSetEnrichment, Clustering, mRNAMicroarray, RNASeq, Visualization, GO

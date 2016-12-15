@@ -8,18 +8,18 @@ Performs a hierarchical clustering analysis on a GO enrichment matrix.
 performHierarchicalClustering(enrichment_matrix, feature = "row", distance_method = "correlation", clustering_method = "average")
 }
 \arguments{
-  \item{enrichment_matrix}{
-  A matrix of enrichment scores. Rows correspond to GO terms and columns correspond to gene lists.
-  }
-  \item{feature}{
-  A value indicating whether to cluster the rows or the columns. Acceptable options are "row" or "col".
-  }
-  \item{distance_method}{
-  The distance measure to use when generating the distance matrix. If "correlation" (default), this function will use one minus the absolute value of the correlation to measure distance. Otherwise, this function will use the "dist" function to measure distance. For available options, see the "method" argument for the "dist" function.
-  }
-  \item{clustering_method}{
-  The agglomeration method to use when performing the hierarchical clustering. For available options, see the "method" argument for the "hclust" function.
-  }
+    \item{enrichment_matrix}{
+    A matrix of enrichment scores. Rows correspond to GO terms and columns correspond to gene lists.
+    }
+    \item{feature}{
+    A value indicating whether to cluster the rows or the columns. Acceptable options are "row" or "col".
+    }
+    \item{distance_method}{
+    The distance measure to use when generating the distance matrix. If "correlation" (default), this function will use one minus the absolute value of the correlation to measure distance. Otherwise, this function will use the "dist" function to measure distance. For available options, see the "method" argument for the "dist" function.
+    }
+    \item{clustering_method}{
+    The agglomeration method to use when performing the hierarchical clustering. For available options, see the "method" argument for the "hclust" function.
+    }
 }
 \value{
 An object of class "hclust" containing a tree produced by hierarchical clustering.

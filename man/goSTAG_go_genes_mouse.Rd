@@ -9,7 +9,7 @@ A list of GO terms and the mouse genes associated with them.
 \details{
 This data is meant for internal goSTAG use.
 }
-\format{
+\value{
 A list of vectors. Each element of the list corresponds to a GO term, and each vector contains the genes associated with the GO term.
 }
 \references{

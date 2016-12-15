@@ -7,13 +7,10 @@
 A tool to use GO Subtrees to Tag and Annotate Genes within a set.
 }
 \details{
-\tabular{ll}{
-Package: \tab goSTAG\cr
-Type: \tab Package\cr
-Version: \tab 0.99.0\cr
-Date: \tab 2016-12-15\cr
-License: \tab What license is it under?\cr
-}
+    \tabular{ll}{
+    Package: \tab goSTAG\cr
+    Type: \tab Package\cr
+    }
 }
 \author{
 Brian D. Bennett\cr

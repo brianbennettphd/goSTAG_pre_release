@@ -8,12 +8,12 @@ Groups similar leaves of a hierarchical cluster analysis into clusters.
 groupClusters(hclust_results, distance_threshold = 0.2)
 }
 \arguments{
-  \item{hclust_results}{
-  An object of class "hclust" containing a tree produced by hierarchical clustering.
-  }
-  \item{distance_threshold}{
-  The distance threshold at which to group leaves into clusters. Leaves whose distance is less than or equal to this threshold will be grouped together. A larger distance threshold will produce fewer clusters with more members, whereas a smaller one will produce more clusters with fewer members.
-  }
+    \item{hclust_results}{
+    An object of class "hclust" containing a tree produced by hierarchical clustering.
+    }
+    \item{distance_threshold}{
+    The distance threshold at which to group leaves into clusters. Leaves whose distance is less than or equal to this threshold will be grouped together. A larger distance threshold will produce fewer clusters with more members, whereas a smaller one will produce more clusters with fewer members.
+    }
 }
 \value{
 A list of vectors. Each element of the list corresponds to a cluster, and each vector contains the GO terms in the cluster.

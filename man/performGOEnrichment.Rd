@@ -8,21 +8,21 @@ Performs a GO enrichment analysis on a set of gene lists and GO terms. Will filt
 performGOEnrichment(gene_lists, go_terms, filter_method = "pval", significance_threshold = 0.05, p.adjust_method = "BH")
 }
 \arguments{
-  \item{gene_lists}{
-  A list of vectors. Each element of the list corresponds to a gene list, and each vector contains the genes in the gene list.
-  }
-  \item{go_terms}{
-  A list of vectors. Each element of the list corresponds to a GO term, and each vector contains the genes associated with the GO term.
-  }
-  \item{filter_method}{
-  A value indicating whether to filter out GO terms based on a nominal p-value or an adjusted p-value. Acceptable options are "pval" (nominal p-value) or "p.adjust" (adjusted p-value).
-  }
-  \item{significance_threshold}{
-  The significance threshold at which to filter out GO terms. GO terms with a nominal or adjusted p-value (indicated by "filter_method") of greater than or equal to this threshold in all gene lists will be filtered out.
-  }
-  \item{p.adjust_method}{
-  The correction method used to adjust the p-values. For available options, see the "method" argument for the "p.adjust" function. Only applicable when filter_method = "p.adjust".
-  }
+    \item{gene_lists}{
+    A list of vectors. Each element of the list corresponds to a gene list, and each vector contains the genes in the gene list.
+    }
+    \item{go_terms}{
+    A list of vectors. Each element of the list corresponds to a GO term, and each vector contains the genes associated with the GO term.
+    }
+    \item{filter_method}{
+    A value indicating whether to filter out GO terms based on a nominal p-value or an adjusted p-value. Acceptable options are "pval" (nominal p-value) or "p.adjust" (adjusted p-value).
+    }
+    \item{significance_threshold}{
+    The significance threshold at which to filter out GO terms. GO terms with a nominal or adjusted p-value (indicated by "filter_method") of greater than or equal to this threshold in all gene lists will be filtered out.
+    }
+    \item{p.adjust_method}{
+    The correction method used to adjust the p-values. For available options, see the "method" argument for the "p.adjust" function. Only applicable when filter_method = "p.adjust".
+    }
 }
 \value{
 A matrix of enrichment scores. Rows correspond to GO terms and columns correspond to gene lists.
