@@ -1,8 +1,8 @@
 Package: goSTAG
 Type: Package
 Title: goSTAG
-Version: 0.99.1
-Date: 2016-12-15
+Version: 0.99.2
+Date: 2016-12-20
 Author: Brian D. Bennett and Pierre R. Bushel
 Maintainer: Brian D. Bennett <brian.bennett@nih.gov> and Pierre R. Bushel <bushel@niehs.nih.gov>
 Description: A tool to use GO Subtrees to Tag and Annotate Genes within a set.
