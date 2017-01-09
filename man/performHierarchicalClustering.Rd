@@ -15,10 +15,10 @@ performHierarchicalClustering(enrichment_matrix, feature = "row", distance_metho
     A value indicating whether to cluster the rows or the columns. Acceptable options are "row" or "col".
     }
     \item{distance_method}{
-    The distance measure to use when generating the distance matrix. If "correlation" (default), this function will use one minus the absolute value of the correlation to measure distance. Otherwise, this function will use the "dist" function to measure distance. For available options, see the "method" argument for the "dist" function.
+    The distance measure to use when generating the distance matrix. If "correlation" (default), this function will use one minus the absolute value of the correlation to measure distance. Otherwise, this function will use the "dist" function to measure distance. Available options are those of the "method" argument for the "dist" function, which are currently "euclidean", "maximum", "manhattan", "canberra", "binary", or "minkowski".
     }
     \item{clustering_method}{
-    The agglomeration method to use when performing the hierarchical clustering. For available options, see the "method" argument for the "hclust" function.
+    The agglomeration method to use when performing the hierarchical clustering. Available options are those of the "method" argument for the "hclust" function, which are currently "ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", or "centroid".
     }
 }
 \value{

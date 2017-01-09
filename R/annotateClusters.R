@@ -1,35 +1,31 @@
 annotateClusters = function( clusters ) {
     ## Load the GO parents from the GO.db package
-    if( Ontology( GOTERM[ clusters[[1]][1] ] ) == "BP" ) {
-        parents = as.list(GOBPPARENTS);
-    } else if( Ontology( GOTERM[ clusters[[1]][1] ] ) == "CC" ) {
-        parents = as.list(GOCCPARENTS);
-    } else if( Ontology( GOTERM[ clusters[[1]][1] ] ) == "MF" ) {
-        parents = as.list(GOMFPARENTS);
-    } else {
-        stop( "Invalid domain" );
-    }
+    parents = switch( Ontology( GOTERM[ clusters[[1]][1] ] ),
+        BP = as.list(GOBPPARENTS),
+        CC = as.list(GOCCPARENTS),
+        MF = as.list(GOMFPARENTS),
+        stop( "Invalid domain" )
+    )
+
+    ## Define the recursive function to get the number of paths to the root
+    get_num_paths = memoise( function( go_id ) {
+        this_parents = parents[[go_id]]
+        this_parents = this_parents[ names(this_parents) == "is_a" ]
+        if( this_parents[1] == "all" ) {
+            1L
+        } else {
+            sum( vapply( this_parents, get_num_paths, integer(1) ) )
+        }
+    } )
 
     ## Cycle through all the clusters
-    cluster_labels = c();
-    for( i in 1:length(clusters) ) {
-        ## Define the recursive function to get the number of paths to the root
-        get_num_paths = function( go_id, parents ) {
-            this_parents = unlist(as.list(parents[go_id]));
-            this_parents = this_parents[ unlist( lapply( strsplit(names(this_parents),"[.]"), function(x) return( x[2] == "is_a" ) ) ) ];
-            if( this_parents[1] == "all" ) {
-                return(1);
-            } else {
-                return( sum( unlist( lapply( this_parents, function(x) return( get_num_paths( x, parents ) ) ) ) ) );
-            }
-        }
-
+    idx = vapply( clusters, function(cluster) {
         ## Get the number of paths to the root for each GO term in the cluster
-        num_paths = unlist( lapply( clusters[[i]], function(x) return(get_num_paths(x,parents)) ) );
+        num_paths = vapply( cluster, get_num_paths, integer(1) )
 
         ## Select the GO term with the largest number of paths to the root
-        cluster_labels[i] = Term( GOTERM[ clusters[[i]][ which.max(num_paths) ] ] );
-    }
+        cluster[ which.max(num_paths) ]
+    }, character(1) )
 
-    return( cluster_labels );
+    Term( GOTERM[ idx ] )
 }

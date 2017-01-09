@@ -21,7 +21,7 @@ performGOEnrichment(gene_lists, go_terms, filter_method = "pval", significance_t
     The significance threshold at which to filter out GO terms. GO terms with a nominal or adjusted p-value (indicated by "filter_method") of greater than or equal to this threshold in all gene lists will be filtered out.
     }
     \item{p.adjust_method}{
-    The correction method used to adjust the p-values. For available options, see the "method" argument for the "p.adjust" function. Only applicable when filter_method = "p.adjust".
+    The correction method used to adjust the p-values. Available options are those of the "method" argument for the "p.adjust" function, which are currently "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", or "none". Only applicable when filter_method = "p.adjust".
     }
 }
 \value{
