@@ -8,9 +8,10 @@ Gene lists derived from the results of genomic analyses are rich in biological i
 
 The goSTAG package is available through Bioconductor and you can install it by running:
 
-## try http:// if https:// URLs are not supported
-source("https://bioconductor.org/biocLite.R")
-biocLite("goSTAG")
+\## try http:// if https:// URLs are not supported  
+source("https://bioconductor.org/biocLite.R")  
+biocLite("goSTAG")  
+
 Once the library is installed, you can load it by running:
 
 library("goSTAG")
